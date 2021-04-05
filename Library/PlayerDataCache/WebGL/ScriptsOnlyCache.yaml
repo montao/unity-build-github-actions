@@ -40,7 +40,6 @@ ScriptsOnlyBuild:
     - Unity.InteractiveTutorials.SceneViewCameraMovedCriterion
     - Unity.InteractiveTutorials.Tutorial
     - Unity.InteractiveTutorials.TutorialContainer
-    - Unity.InteractiveTutorials.TutorialManager
     - Unity.InteractiveTutorials.TutorialPage
     - Unity.InteractiveTutorials.TutorialProjectSettings
     - Unity.InteractiveTutorials.TutorialStyles
@@ -50,7 +49,6 @@ ScriptsOnlyBuild:
     - Unity.Tutorials.TutorialCallbacks
     Unity.Play.Publisher.Editor.dll:
     - Unity.Play.Publisher.Editor.AnalyticsHelper
-    - Unity.Play.Publisher.Editor.PublisherWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -59,6 +57,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -114,71 +114,71 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 270}
+      Script: {instanceID: 672}
     - Class: 114
-      Script: {instanceID: 1438}
+      Script: {instanceID: 1504}
     - Class: 114
-      Script: {instanceID: 1440}
+      Script: {instanceID: 1506}
+    - Class: 114
+      Script: {instanceID: 1734}
+    - Class: 114
+      Script: {instanceID: 1802}
+    - Class: 114
+      Script: {instanceID: 1808}
+    - Class: 114
+      Script: {instanceID: 2036}
+    - Class: 114
+      Script: {instanceID: 2066}
     - Class: 114
       Script: {instanceID: 2120}
     - Class: 114
-      Script: {instanceID: 2188}
+      Script: {instanceID: 2142}
     - Class: 114
-      Script: {instanceID: 2194}
+      Script: {instanceID: 2370}
     - Class: 114
-      Script: {instanceID: 2422}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2424}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2476}
+    - Class: 114
+      Script: {instanceID: 2522}
+    - Class: 114
+      Script: {instanceID: 2542}
+    - Class: 114
+      Script: {instanceID: 2558}
+    - Class: 114
+      Script: {instanceID: 2584}
+    - Class: 114
+      Script: {instanceID: 2608}
     - Class: 114
       Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2888}
     - Class: 114
-      Script: {instanceID: 2802}
-    - Class: 114
-      Script: {instanceID: 2810}
-    - Class: 114
-      Script: {instanceID: 2862}
-    - Class: 114
-      Script: {instanceID: 2908}
-    - Class: 114
-      Script: {instanceID: 2928}
-    - Class: 114
-      Script: {instanceID: 2944}
-    - Class: 114
-      Script: {instanceID: 2970}
+      Script: {instanceID: 2938}
     - Class: 114
       Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3142}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3274}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 3324}
+      Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 3380}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 3542}
+      Script: {instanceID: 3948}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3984}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 4224}
     - Class: 114
-      Script: {instanceID: 3784}
+      Script: {instanceID: 4392}
     - Class: 114
-      Script: {instanceID: 4334}
-    - Class: 114
-      Script: {instanceID: 4370}
-    - Class: 114
-      Script: {instanceID: 4610}
-    - Class: 114
-      Script: {instanceID: 4778}
-    - Class: 114
-      Script: {instanceID: 4864}
+      Script: {instanceID: 4478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157

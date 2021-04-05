@@ -15462,6 +15462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_RebuildImage_m68360C561562948C2C8E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_m2BAA95BEC9F4F4E0EED980F434D7F1A39DA1850E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m3099484248CB3103ED2B30C229559248C312444C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m7A4900D7FA7200437D9764FF2DF2F21936058AEA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
@@ -15473,7 +15474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_RebuildImage_m68360C561562948C2C8E
 		int32_t L_1;
 		L_1 = List_1_get_Count_m3099484248CB3103ED2B30C229559248C312444C_inline(L_0, /*hidden argument*/List_1_get_Count_m3099484248CB3103ED2B30C229559248C312444C_RuntimeMethod_var);
 		V_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_1, (int32_t)1));
-		goto IL_003e;
+		goto IL_004c;
 	}
 
 IL_000f:
@@ -15485,41 +15486,53 @@ IL_000f:
 		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_4;
 		L_4 = List_1_get_Item_m7A4900D7FA7200437D9764FF2DF2F21936058AEA_inline(L_2, L_3, /*hidden argument*/List_1_get_Item_m7A4900D7FA7200437D9764FF2DF2F21936058AEA_RuntimeMethod_var);
 		V_1 = L_4;
-		// if (spriteAtlas.CanBindTo(g.activeSprite))
-		SpriteAtlas_t72834B063A58822D683F5557DF8D164740C8A5F9 * L_5 = ___spriteAtlas0;
-		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_6 = V_1;
-		Sprite_t5B10B1178EC2E6F53D33FFD77557F31C08A51ED9 * L_7;
-		L_7 = Image_get_activeSprite_m0B2FA144D32A1F4EEB6773BC470E4A632DB4497A(L_6, /*hidden argument*/NULL);
-		bool L_8;
-		L_8 = SpriteAtlas_CanBindTo_m01D0066BE9609582194ADA0DA70E598530DACF03(L_5, L_7, /*hidden argument*/NULL);
-		if (!L_8)
+		// if (null != g.activeSprite && spriteAtlas.CanBindTo(g.activeSprite))
+		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_5 = V_1;
+		Sprite_t5B10B1178EC2E6F53D33FFD77557F31C08A51ED9 * L_6;
+		L_6 = Image_get_activeSprite_m0B2FA144D32A1F4EEB6773BC470E4A632DB4497A(L_5, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		bool L_7;
+		L_7 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90((Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, L_6, /*hidden argument*/NULL);
+		if (!L_7)
 		{
-			goto IL_003a;
+			goto IL_0048;
+		}
+	}
+	{
+		SpriteAtlas_t72834B063A58822D683F5557DF8D164740C8A5F9 * L_8 = ___spriteAtlas0;
+		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_9 = V_1;
+		Sprite_t5B10B1178EC2E6F53D33FFD77557F31C08A51ED9 * L_10;
+		L_10 = Image_get_activeSprite_m0B2FA144D32A1F4EEB6773BC470E4A632DB4497A(L_9, /*hidden argument*/NULL);
+		bool L_11;
+		L_11 = SpriteAtlas_CanBindTo_m01D0066BE9609582194ADA0DA70E598530DACF03(L_8, L_10, /*hidden argument*/NULL);
+		if (!L_11)
+		{
+			goto IL_0048;
 		}
 	}
 	{
 		// g.SetAllDirty();
-		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_9 = V_1;
-		VirtActionInvoker0::Invoke(26 /* System.Void UnityEngine.UI.Graphic::SetAllDirty() */, L_9);
+		Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C * L_12 = V_1;
+		VirtActionInvoker0::Invoke(26 /* System.Void UnityEngine.UI.Graphic::SetAllDirty() */, L_12);
 		// m_TrackedTexturelessImages.RemoveAt(i);
 		IL2CPP_RUNTIME_CLASS_INIT(Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_il2cpp_TypeInfo_var);
-		List_1_t815A476B0A21E183042059E705F9E505478CD8AE * L_10 = ((Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_StaticFields*)il2cpp_codegen_static_fields_for(Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_il2cpp_TypeInfo_var))->get_m_TrackedTexturelessImages_55();
-		int32_t L_11 = V_0;
-		List_1_RemoveAt_m2BAA95BEC9F4F4E0EED980F434D7F1A39DA1850E(L_10, L_11, /*hidden argument*/List_1_RemoveAt_m2BAA95BEC9F4F4E0EED980F434D7F1A39DA1850E_RuntimeMethod_var);
+		List_1_t815A476B0A21E183042059E705F9E505478CD8AE * L_13 = ((Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_StaticFields*)il2cpp_codegen_static_fields_for(Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C_il2cpp_TypeInfo_var))->get_m_TrackedTexturelessImages_55();
+		int32_t L_14 = V_0;
+		List_1_RemoveAt_m2BAA95BEC9F4F4E0EED980F434D7F1A39DA1850E(L_13, L_14, /*hidden argument*/List_1_RemoveAt_m2BAA95BEC9F4F4E0EED980F434D7F1A39DA1850E_RuntimeMethod_var);
 	}
 
-IL_003a:
+IL_0048:
 	{
 		// for (var i = m_TrackedTexturelessImages.Count - 1; i >= 0; i--)
-		int32_t L_12 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_12, (int32_t)1));
+		int32_t L_15 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_15, (int32_t)1));
 	}
 
-IL_003e:
+IL_004c:
 	{
 		// for (var i = m_TrackedTexturelessImages.Count - 1; i >= 0; i--)
-		int32_t L_13 = V_0;
-		if ((((int32_t)L_13) >= ((int32_t)0)))
+		int32_t L_16 = V_0;
+		if ((((int32_t)L_16) >= ((int32_t)0)))
 		{
 			goto IL_000f;
 		}

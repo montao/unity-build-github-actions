@@ -2133,6 +2133,22 @@ public:
 };
 
 
+// UnityEngine.PlayerLoop.PostLateUpdate/XRPostLateUpdate
+struct  XRPostLateUpdate_t2DCEBE93C7B7994BC1888C2BF003C386E131DEB5 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t XRPostLateUpdate_t2DCEBE93C7B7994BC1888C2BF003C386E131DEB5__padding[1];
+	};
+
+public:
+};
+
+
 // UnityEngine.PlayerLoop.PostLateUpdate/XRPostPresent
 struct  XRPostPresent_t1B355F20B2823F13F6FBC66E36526B280B7EA85C 
 {
@@ -2143,6 +2159,22 @@ public:
 		{
 		};
 		uint8_t XRPostPresent_t1B355F20B2823F13F6FBC66E36526B280B7EA85C__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate/XRPreEndFrame
+struct  XRPreEndFrame_t35AEF9FB00F67C92D7A01AFDBB56D2FC3CC3A251 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t XRPreEndFrame_t35AEF9FB00F67C92D7A01AFDBB56D2FC3CC3A251__padding[1];
 	};
 
 public:
@@ -3893,6 +3925,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UpdateFunction_EndInvoke_mB4BC0AA40E9C83
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

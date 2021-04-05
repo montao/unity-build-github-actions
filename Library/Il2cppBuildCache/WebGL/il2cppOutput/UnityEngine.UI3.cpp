@@ -11742,6 +11742,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CanvasUpdateRegistry_IsRebuildingGraphic
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CanvasUpdateRegistry_IsRebuildingLayout_m8A61A652F09978C4F7D9776425DE43C8C6EE01D7 (const RuntimeMethod* method);
 // UnityEngine.Font UnityEngine.UI.FontData::get_font()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Font_tB53D3F362CB1A0B92307B362826F212AE2D2A6A9 * FontData_get_font_mF59D5C9E97B46D8F298E83AD5A91B59740ACB8AF_inline (FontData_t0F1E9B3ED8136CD40782AC9A6AFB69CAD127C738 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Behaviour::get_isActiveAndEnabled()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_isActiveAndEnabled_mDD843C0271D492C1E08E0F8DEE8B6F1CFA951BFA (Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.FontUpdateTracker::UntrackText(UnityEngine.UI.Text)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FontUpdateTracker_UntrackText_m1799E29626E2250B0428881391DF596F984156C9 (Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * ___t0, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.FontData::set_font(UnityEngine.Font)
@@ -11889,8 +11891,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGroup_RegisterToggle_m7E87D7943C6D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Toggle_get_isOn_m2B1F3640101A6FCDA6B5AF27924FFD10E3A89A6C_inline (Toggle_t68F5A84CDD2BBAEA866F42EB4E0C9F2B431D612E * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.ToggleGroup::NotifyToggleOn(UnityEngine.UI.Toggle,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ToggleGroup_NotifyToggleOn_m4B1E6B18DFFFB672B2227C4DCAB68A26440FA33F (ToggleGroup_t12E1DFDEB3FFD979A20299EE42A94388AC619C95 * __this, Toggle_t68F5A84CDD2BBAEA866F42EB4E0C9F2B431D612E * ___toggle0, bool ___sendCallback1, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Behaviour::get_isActiveAndEnabled()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_isActiveAndEnabled_mDD843C0271D492C1E08E0F8DEE8B6F1CFA951BFA (Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.UI.ToggleGroup::AnyTogglesOn()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ToggleGroup_AnyTogglesOn_mA6EB9869F012D763BF7150EC335DFF548A02837D (ToggleGroup_t12E1DFDEB3FFD979A20299EE42A94388AC619C95 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.UI.ToggleGroup::get_allowSwitchOff()
@@ -16091,15 +16091,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Text_set_font_m10F529719C942343F7B963D28
 
 IL_0014:
 	{
+		// if (isActiveAndEnabled)
+		bool L_4;
+		L_4 = Behaviour_get_isActiveAndEnabled_mDD843C0271D492C1E08E0F8DEE8B6F1CFA951BFA(__this, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
 		// FontUpdateTracker.UntrackText(this);
 		IL2CPP_RUNTIME_CLASS_INIT(FontUpdateTracker_t6CDAB2F65201DFA5C15166ED2318E076F58620CF_il2cpp_TypeInfo_var);
 		FontUpdateTracker_UntrackText_m1799E29626E2250B0428881391DF596F984156C9(__this, /*hidden argument*/NULL);
+	}
+
+IL_0022:
+	{
 		// m_FontData.font = value;
-		FontData_t0F1E9B3ED8136CD40782AC9A6AFB69CAD127C738 * L_4 = __this->get_m_FontData_36();
-		Font_tB53D3F362CB1A0B92307B362826F212AE2D2A6A9 * L_5 = ___value0;
-		FontData_set_font_m026F16527DCD0CD4F25361B4DED1756553D0FAE8_inline(L_4, L_5, /*hidden argument*/NULL);
+		FontData_t0F1E9B3ED8136CD40782AC9A6AFB69CAD127C738 * L_5 = __this->get_m_FontData_36();
+		Font_tB53D3F362CB1A0B92307B362826F212AE2D2A6A9 * L_6 = ___value0;
+		FontData_set_font_m026F16527DCD0CD4F25361B4DED1756553D0FAE8_inline(L_5, L_6, /*hidden argument*/NULL);
+		// if (isActiveAndEnabled)
+		bool L_7;
+		L_7 = Behaviour_get_isActiveAndEnabled_mDD843C0271D492C1E08E0F8DEE8B6F1CFA951BFA(__this, /*hidden argument*/NULL);
+		if (!L_7)
+		{
+			goto IL_003c;
+		}
+	}
+	{
 		// FontUpdateTracker.TrackText(this);
+		IL2CPP_RUNTIME_CLASS_INIT(FontUpdateTracker_t6CDAB2F65201DFA5C15166ED2318E076F58620CF_il2cpp_TypeInfo_var);
 		FontUpdateTracker_TrackText_m3455C2F921AA8A4E9756D23624FC3E9D6F8BFD60(__this, /*hidden argument*/NULL);
+	}
+
+IL_003c:
+	{
 		// SetAllDirty();
 		VirtActionInvoker0::Invoke(26 /* System.Void UnityEngine.UI.Graphic::SetAllDirty() */, __this);
 		// }
