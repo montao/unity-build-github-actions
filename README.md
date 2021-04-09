@@ -5,3 +5,5 @@ Releases come from the link.
 
 For MacOS Big Sur, you may need to set permission with methods described at the following link  
 https://stackoverflow.com/questions/64842819/cant-run-app-because-of-permission-in-big-sur/64895860#64895860
+
+We should have removed Logs, PCBuilds, UserSettings, and WebGL Builds from the Unity project repo
